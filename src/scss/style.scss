@@ -1,0 +1,10 @@
+// @import 'reset';
+@import 'normalize';
+@import 'fonts';
+@import 'vars';
+@import 'global.scss';
+
+@import '../../node_modules/@splidejs/splide/dist/css/splide.min';
+
+@import 'header';
+@import 'top';

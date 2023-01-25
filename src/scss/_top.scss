@@ -1,0 +1,100 @@
+.top {
+  background-image: url('@img/top-bg-1.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 550px;
+  position: relative;
+
+  &__inner {
+    display: flex;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    margin-bottom: 25px;
+  }
+
+  &__tabs {
+    margin-top: 80px;
+  }
+
+  &__tabs-nav {
+    display: flex;
+    padding-left: 100px;
+  }
+
+  &__tabs-btn {
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    background-color: var(--color-white30);
+    color: var(--color-primary);
+    border: none;
+    border-radius: 20px 20px 0px 0px;
+    cursor: pointer;
+    transition: 0.3s;
+    &--active {
+      background-color: var(--color-white70);
+    }
+  }
+
+  &__tabs-items {
+    padding: 40px 30px 40px 40px;
+    max-width: 780px;
+    background-color: var(--color-white70);
+    border-radius: 80px 0px;
+  }
+
+  &__tabs-item {
+    display: none;
+
+    &--active {
+      display: block;
+    }
+  }
+
+  &__text {
+    font-size: 20px;
+    margin: 0 0 25px;
+    max-width: 440px;
+  }
+
+  &__slider-wrapper {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    pointer-events: none;
+  }
+
+  &__slider-img-track {
+    left: 680px;
+  }
+
+  &__arrows {
+    pointer-events: auto;
+  }
+
+  &__arrow {
+    background-color: transparent;
+    border: 1px solid $color-primary;
+    width: 40px;
+    height: 40px;
+    transition: 0.3s;
+    svg {
+      width: 24px;
+      height: 24px;
+      path {
+        transition: 0.3s;
+      }
+    }
+    &:not(:disabled):hover,
+    &:focus-visible {
+      background-color: $color-primary;
+      svg path {
+        fill: $color-white2;
+      }
+    }
+  }
+}
