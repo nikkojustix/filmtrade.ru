@@ -58,3 +58,17 @@ filmType.addEventListener('change', (e) => {
     }
   });
 });
+
+const equipSlider = new Splide('.equip__slider', {
+  type: 'fade',
+  rewind: true,
+  speed: 400,
+  width: 780,
+  // autoplay: true,
+  autoHeight: true,
+  arrows: true,
+  pagination: false,
+  pauseOnFocus: true,
+  pauseOnHover: true,
+});
+equipSlider.mount();

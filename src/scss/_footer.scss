@@ -1,0 +1,48 @@
+.footer {
+  padding: 80px 0;
+  background-color: var(--color-primary);
+  color: var(--color-white2);
+  &__items {
+    display: flex;
+  }
+
+  &__item {
+    flex-basis: 280px;
+    &:last-child {
+      display: flex;
+      flex-direction: column;
+      text-align: right;
+    }
+  }
+
+  &__menu {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  &__menu-item {
+    margin-bottom: 20px;
+  }
+
+  &__menu-link {
+    font-weight: 500;
+  }
+}
+
+.socials {
+  display: flex;
+  margin-top: 20px;
+  &__link {
+    display: block;
+    margin-right: 20px;
+    width: 40px;
+    height: 40px;
+    &:nth-child(1) {
+      background-image: url('@img/youtube.svg');
+    }
+    &:nth-child(2) {
+      background-image: url('@img/vk.svg');
+    }
+  }
+}

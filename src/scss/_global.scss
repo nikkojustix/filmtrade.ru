@@ -75,6 +75,7 @@ img {
 }
 
 .btn {
+  position: relative;
   background-color: $color-primary;
   color: $color-white2;
   white-space: nowrap;
@@ -82,15 +83,12 @@ img {
   border: 1px solid transparent;
   border-radius: 50px;
   cursor: pointer;
+  z-index: 2;
   transition: 0.3s;
 
   &:hover,
   &:focus {
     background-color: $color-primary-light;
-  }
-
-  &:active {
-    background-color: $color-primary-dark;
   }
 
   &--outline {
@@ -104,12 +102,32 @@ img {
       color: $color-white2;
     }
   }
+
+  &:active {
+    background-color: $color-primary-dark;
+  }
 }
 
 .form {
   display: flex;
-  &--row {
+  &--column {
     flex-direction: column;
+    .form__group + .form__group {
+      margin-left: 0;
+    }
+    .form__group {
+      margin-bottom: 25px;
+    }
+
+    .form__input {
+      max-width: 100%;
+    }
+
+    .form__btn {
+      margin-right: auto;
+      margin-left: 0;
+      margin-bottom: 25px;
+    }
   }
 
   &__group {
@@ -185,5 +203,44 @@ img {
 
   &__btn {
     margin-left: 20px;
+  }
+
+  &__checkbox {
+    display: none;
+    &:checked + .form__checkbox-label::before {
+      background-color: var(--color-primary);
+    }
+  }
+  &__checkbox-label {
+    position: relative;
+    padding-left: 25px;
+    font-size: 13px;
+    display: inline-block;
+    width: 200px;
+    &::before {
+      position: absolute;
+      content: '';
+      width: 16px;
+      height: 16px;
+      left: 0;
+      border: 1px solid var(--color-primary);
+      background-image: url('@img/checkboxmark.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 2px;
+      transition: 0.3s;
+    }
+  }
+
+  &__licence-link {
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .title {
+    font-size: 28px;
   }
 }

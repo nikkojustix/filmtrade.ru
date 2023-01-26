@@ -1,6 +1,6 @@
 .pros {
   margin-top: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
   &__items {
     display: flex;
     justify-content: space-between;
@@ -50,6 +50,7 @@
 
 @media (max-width: 767px) {
   .pros {
+    margin-bottom: 60px;
     &__icon {
       width: 60px;
       height: 60px;
