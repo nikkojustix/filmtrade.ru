@@ -11,21 +11,35 @@ const topSliderImg = new Splide('.top__slider-img', {
   height: '550px',
   rewind: true,
   speed: 400,
-  // autoplay: true,
+  autoplay: true,
   pauseOnFocus: true,
   pauseOnHover: true,
+  breakpoints: {
+    767: {
+      destroy: true,
+    },
+  },
 });
 
 const topSliderTitle = new Splide('.top__slider-title', {
   type: 'fade',
   rewind: true,
   speed: 400,
-  // autoplay: true,
+  width: '100%',
+  autoplay: true,
   autoHeight: true,
   arrows: false,
   pagination: false,
   pauseOnFocus: true,
   pauseOnHover: true,
+  breakpoints: {
+    767: {
+      arrows: true,
+    },
+    // 479: {
+    //   width: '80vw',
+    // },
+  },
 });
 
 topSliderTitle.sync(topSliderImg);
@@ -64,7 +78,7 @@ const equipSlider = new Splide('.equip__slider', {
   rewind: true,
   speed: 400,
   width: 780,
-  // autoplay: true,
+  autoplay: true,
   autoHeight: true,
   arrows: true,
   pagination: false,

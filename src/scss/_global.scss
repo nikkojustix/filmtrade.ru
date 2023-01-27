@@ -51,6 +51,7 @@ img {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  overflow-x: hidden;
 }
 
 .content {
@@ -121,6 +122,7 @@ img {
 
     .form__input {
       max-width: 100%;
+      border-radius: 0px;
     }
 
     .form__btn {
@@ -239,8 +241,20 @@ img {
   }
 }
 
+@media (max-width: 1199px) {
+  body {
+    overflow-x: hidden;
+  }
+}
+
 @media (max-width: 767px) {
   .title {
     font-size: 28px;
+  }
+}
+
+@media (max-width: 479px) {
+  .form__btn {
+    font-size: 15px;
   }
 }
