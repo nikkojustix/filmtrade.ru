@@ -64,10 +64,44 @@
 
   &__excerpt {
     display: -webkit-box;
-    -webkit-line-clamp: 4;
+    -webkit-line-clamp: 3;
     overflow: hidden;
     -webkit-box-orient: vertical;
     margin: 0;
+    * {
+      margin: 0 0 20px;
+    }
+    p {
+      line-height: 1.4;
+    }
+    h5 {
+      color: var(--color-primary);
+      font-weight: 500;
+      font-size: 18px;
+    }
+    h6 {
+      color: var(--color-primary);
+      font-weight: 500;
+      font-size: 16px;
+    }
+    ul {
+      padding: 0;
+      list-style-type: none;
+    }
+    li {
+      position: relative;
+      padding-left: 26px;
+      &::before {
+        position: absolute;
+        content: '';
+        width: 16px;
+        height: 16px;
+        top: 0;
+        left: 0;
+        background-image: url('@img/checkmark.svg');
+        background-size: cover;
+      }
+    }
   }
 }
 
