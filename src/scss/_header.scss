@@ -259,7 +259,37 @@
     font-size: 17px;
     line-height: 20px;
     border-radius: 4px;
-    padding: 10px;
+    padding: 10px 20px;
+  }
+}
+
+.sidebtns {
+  position: fixed;
+  top: 200px;
+  z-index: 2;
+  right: -170px;
+
+  &__icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+  }
+
+  &__btn {
+    border: none;
+    border-radius: 8px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    width: 100%;
+    margin: 10px 0 0 10px;
+    cursor: pointer;
+    transition: 0.7s;
+    &:hover {
+      transform: translateX(-170px);
+    }
   }
 }
 
