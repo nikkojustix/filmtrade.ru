@@ -17,9 +17,10 @@ export function toggleMobileMenu(e) {
   e.preventDefault();
   const menu = document.querySelector('.burger__menu');
   const btnInner = document.querySelector('.burger__btn-inner');
+  const wrapper = document.querySelector('.wrapper');
   menu.classList.toggle('burger__menu--active');
   btnInner.classList.toggle('burger__btn-inner--active');
-  document.body.classList.toggle('locked');
+  wrapper.classList.toggle('locked');
 }
 
 export function tabs(btnClass, itemClass, activeModifire) {
@@ -49,4 +50,24 @@ export function tabs(btnClass, itemClass, activeModifire) {
       showContent(i);
     });
   });
+}
+
+export function accordion() {
+  const groups = document.querySelectorAll('.accordion__group');
+  console.log(groups);
+  groups.forEach((group) => {
+    const items = group.children;
+    console.log(items);
+  });
+  // items.forEach((item) => {
+  //   item.addEventListener('click', () => {
+  //     const parent = item.parentNode;
+  //     if (parent.classList.contains('accordion__item--active')) {
+  //       parent.classList.remove('accordion__item--active');
+  //     } else {
+  //       document.querySelectorAll('.accordion__item').forEach((child) => child.classList.remove('accordion__item--active'));
+  //       parent.classList.add('accordion__item--active');
+  //     }
+  //   });
+  // });
 }

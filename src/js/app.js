@@ -140,3 +140,5 @@ if (document.querySelector('.product__main-image') != null && document.querySele
 if (document.querySelector('.product__tabs-btn') != null) {
   flsFunctions.tabs('product__tabs-btn', 'product__tabs-item', 'active');
 }
+
+flsFunctions.accordion();
