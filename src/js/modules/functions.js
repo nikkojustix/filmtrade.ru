@@ -54,20 +54,36 @@ export function tabs(btnClass, itemClass, activeModifire) {
 
 export function accordion() {
   const groups = document.querySelectorAll('.accordion__group');
-  console.log(groups);
   groups.forEach((group) => {
     const items = group.children;
-    console.log(items);
+    for (const item of items) {
+      const trigger = item.querySelector('.accordion__trigger');
+      const num = item.querySelector('.accordion__trigger-num');
+      if (item.querySelectorAll('.accordion__item').length > 0) {
+        num.textContent = item.querySelectorAll('.accordion__item').length;
+      } else {
+        num.textContent = item.querySelectorAll('.accordion__link').length;
+      }
+      const content = item.querySelector('.accordion__content');
+      trigger.addEventListener('click', (e) => {
+        if (item.classList.contains('accordion__item--active')) {
+          item.classList.remove('accordion__item--active');
+          content.style.maxHeight = null;
+          trigger.ariaExpanded = false;
+        } else {
+          for (const item of items) {
+            item.classList.remove('accordion__item--active');
+            item.querySelector('.accordion__trigger').ariaExpanded = false;
+            item.querySelector('.accordion__content').style.maxHeight = null;
+          }
+          item.classList.add('accordion__item--active');
+          content.style.maxHeight = content.scrollHeight + 'px';
+          if (item.parentNode.parentNode.classList.contains('accordion__content')) {
+            item.parentNode.parentNode.style.maxHeight = item.parentNode.parentNode.scrollHeight + content.scrollHeight + 'px';
+          }
+          trigger.ariaExpanded = true;
+        }
+      });
+    }
   });
-  // items.forEach((item) => {
-  //   item.addEventListener('click', () => {
-  //     const parent = item.parentNode;
-  //     if (parent.classList.contains('accordion__item--active')) {
-  //       parent.classList.remove('accordion__item--active');
-  //     } else {
-  //       document.querySelectorAll('.accordion__item').forEach((child) => child.classList.remove('accordion__item--active'));
-  //       parent.classList.add('accordion__item--active');
-  //     }
-  //   });
-  // });
 }
