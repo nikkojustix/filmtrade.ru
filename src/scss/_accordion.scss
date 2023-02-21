@@ -96,6 +96,9 @@
     opacity: 0;
     visibility: hidden;
     transition: 0.3s;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    will-change: max-height;
   }
 
   &__arrow {
