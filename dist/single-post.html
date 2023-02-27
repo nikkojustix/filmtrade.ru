@@ -112,7 +112,7 @@
     <img class="sidebtns__icon" src="img/sidebtns/catalog.svg" alt="Каталог" />
     <span class="sidebtns__text">Каталог</span>
   </a>
-  <button class="sidebtns__btn">
+  <button class="sidebtns__btn open-modal-callback">
     <img class="sidebtns__icon" src="img/sidebtns/callback.svg" alt="Связаться со мной" />
     <span class="sidebtns__text">Связаться со мной</span>
   </button>
@@ -263,6 +263,60 @@
     </div>
   </div>
 </footer>
+
+<div class="modal modal--callback">
+  <div class="modal__inner">
+    <div class="modal__header">
+      <div class="modal__close">&#10006;</div>
+      <div class="modal__title">Заказать звонок</div>
+    </div>
+    <div class="modal__body">
+      <form class="form form--callback-modal form--column" action="">
+        <div class="form__group">
+          <input class="form__input" id="callback-modal-name" name="name" type="text" placeholder="Ваше имя" />
+          <label class="form__label" for="callback-modal-name">Ваше имя</label>
+        </div>
+        <div class="form__group">
+          <input class="form__input" id="callback-modal-tel" name="tel" type="tel" placeholder="Номер телефона" />
+          <label class="form__label" for="callback-modal-tel">Номер телефона</label>
+        </div>
+        <button class="form__btn btn" type="submit">Заказать</button>
+        <div class="form__group">
+          <input type="hidden" name="checkbox" value="" />
+          <input class="form__checkbox" type="checkbox" name="checkbox" id="callback-modal-license" value="1" checked required />
+          <label class="form__checkbox-label" for="callback-modal-license">Я согласен на обработку персональных данных</label>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="modal modal--order">
+  <div class="modal__inner">
+    <div class="modal__header">
+      <div class="modal__close">&#10006;</div>
+      <div class="modal__title">Заказать товар</div>
+    </div>
+    <div class="modal__body">
+      <form class="form form--order-modal form--column" action="">
+        <div class="form__group">
+          <input class="form__input" id="order-modal-name" name="name" type="text" placeholder="Ваше имя" />
+          <label class="form__label" for="order-modal-name">Ваше имя</label>
+        </div>
+        <div class="form__group">
+          <input class="form__input" id="order-modal-tel" name="tel" type="tel" placeholder="Номер телефона" />
+          <label class="form__label" for="order-modal-tel">Номер телефона</label>
+        </div>
+        <button class="form__btn btn" type="submit">Заказать</button>
+        <div class="form__group">
+          <input type="hidden" name="checkbox" value="" />
+          <input class="form__checkbox" type="checkbox" name="checkbox" id="order-modal-license" value="1" checked required />
+          <label class="form__checkbox-label" for="order-modal-license">Я согласен на обработку персональных данных</label>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
 
     </div>
     <script src="js/app.min.js"></script>

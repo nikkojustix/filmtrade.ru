@@ -195,6 +195,7 @@ img {
   &__select {
     max-width: 240px;
     margin-right: 20px;
+    padding-left: 0;
   }
 
   &__category {
@@ -212,6 +213,9 @@ img {
     display: none;
     &:checked + .form__checkbox-label::before {
       background-color: var(--color-primary);
+    }
+    &.error + .form__checkbox-label::before {
+      border-color: var(--color-red);
     }
   }
   &__checkbox-label {

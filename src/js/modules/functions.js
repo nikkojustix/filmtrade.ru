@@ -159,13 +159,48 @@ const slideToggle = (target, duration = 500) => {
   }
 };
 
-// ====
+export function calcPrice() {
+  const priceValue = document.querySelector('.product__price-value');
+  const COST_PER_KILO = 370;
+  const filmThickness = parseFloat(
+    document
+      .querySelector('h1')
+      .innerText.replace(/[^0-9,\,]/g, '')
+      .replace(',', '.')
+  );
+  const filmWidth = +document.querySelector('.form__select[name="width"]').value;
+  const filmLength = +document.querySelector('.form__select[name="length"]').value;
+  parseFloat('Полиолефиновая плёнка POLYXFILMS (полурукав 12,5 мкм)'.replace(/[^0-9,\,]/g, '').replace(',', '.'));
 
-// let speedAnimation = 4000;
-// let targetId = document.getElementById("target");
+  let price = filmWidth * filmThickness * filmLength * 0.000001 * COST_PER_KILO;
+  price *= filmThickness === 35 ? 0.93 : 0.92;
+  priceValue.innerText = Math.round(price).toLocaleString() + ' руб';
+  return [filmWidth, filmLength];
+}
 
-// let slideBtnClick = (id, sl) => document.getElementById(id).addEventListener('click', () => sl(targetId, speedAnimation));
+export function bindModal(trigger, modal, close) {
+  trigger = document.querySelectorAll(trigger);
+  modal = document.querySelector(modal);
+  close = document.querySelector(close);
 
-// slideBtnClick('triggerUp', slideUp);
-// slideBtnClick('triggerDown', slideDown);
-// slideBtnClick('triggerToggle', slideToggle);
+  const body = document.body;
+  if (trigger != null) {
+    trigger.forEach((trig) => {
+      trig.addEventListener('click', (e) => {
+        e.preventDefault();
+        modal.style.display = 'flex';
+        body.classList.add('locked');
+      });
+    });
+  }
+  close.addEventListener('click', () => {
+    modal.style.display = 'none';
+    body.classList.remove('locked');
+  });
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+      body.classList.remove('locked');
+    }
+  });
+}

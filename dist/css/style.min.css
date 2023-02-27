@@ -533,6 +533,7 @@ img {
 .form__select {
   max-width: 240px;
   margin-right: 20px;
+  padding-left: 0;
 }
 .form__category {
   display: none;
@@ -548,6 +549,9 @@ img {
 }
 .form__checkbox:checked + .form__checkbox-label::before {
   background-color: var(--color-primary);
+}
+.form__checkbox.error + .form__checkbox-label::before {
+  border-color: var(--color-red);
 }
 .form__checkbox-label {
   position: relative;
@@ -2110,13 +2114,19 @@ img {
   flex-direction: column;
   align-self: flex-start;
   align-items: center;
+  gap: 20px;
+}
+.product__form-group {
+  width: 100%;
+}
+.product__form-group + .product__form-group {
+  margin: 0;
 }
 .product__price-value {
   font-weight: 600;
   font-size: 28px;
   line-height: 34px;
   color: var(--color-primary);
-  margin-bottom: 20px;
 }
 .product__price-btn {
   padding: 15px 40px;
@@ -2815,4 +2825,36 @@ img {
 }
 .accordion__lang[lang=zh] {
   background-position: 0 -1156px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  display: none;
+}
+.modal__inner {
+  padding: 25px;
+  max-width: 280px;
+  width: 100%;
+  min-height: 300px;
+  border-radius: 5px;
+  background-color: var(--color-white);
+}
+.modal__title {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.modal__close {
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
 }

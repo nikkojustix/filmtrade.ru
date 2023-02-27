@@ -128,14 +128,23 @@
     flex-direction: column;
     align-self: flex-start;
     align-items: center;
+    gap: 20px;
+  }
+  &__form-group {
+    width: 100%;
+    & + & {
+      margin: 0;
+    }
+  }
+  .form__select {
   }
   &__price-value {
     font-weight: 600;
     font-size: 28px;
     line-height: 34px;
     color: var(--color-primary);
-    margin-bottom: 20px;
   }
+
   &__price-btn {
     padding: 15px 40px;
   }
