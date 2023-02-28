@@ -173,6 +173,9 @@ export function calcPrice() {
   parseFloat('Полиолефиновая плёнка POLYXFILMS (полурукав 12,5 мкм)'.replace(/[^0-9,\,]/g, '').replace(',', '.'));
 
   let price = filmWidth * filmThickness * filmLength * 0.000001 * COST_PER_KILO;
+  if (document.querySelector('h1').innerText.includes('полурукав')) {
+    price *= 2;
+  }
   price *= filmThickness === 35 ? 0.93 : 0.92;
   priceValue.innerText = Math.round(price).toLocaleString() + ' руб';
   return [filmWidth, filmLength];
@@ -181,7 +184,7 @@ export function calcPrice() {
 export function bindModal(trigger, modal, close) {
   trigger = document.querySelectorAll(trigger);
   modal = document.querySelector(modal);
-  close = document.querySelector(close);
+  close = document.querySelectorAll(close);
 
   const body = document.body;
   if (trigger != null) {
@@ -193,9 +196,11 @@ export function bindModal(trigger, modal, close) {
       });
     });
   }
-  close.addEventListener('click', () => {
-    modal.style.display = 'none';
-    body.classList.remove('locked');
+  close.forEach((closeBtn) => {
+    closeBtn.addEventListener('click', () => {
+      modal.style.display = 'none';
+      body.classList.remove('locked');
+    });
   });
   modal.addEventListener('click', (e) => {
     if (e.target === modal) {
