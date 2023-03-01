@@ -76,6 +76,10 @@
     left: 680px;
   }
 
+  &__img {
+    max-width: 500px;
+  }
+
   &__arrows {
     pointer-events: auto;
   }
