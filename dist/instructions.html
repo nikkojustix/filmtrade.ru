@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Страница товара</title>
-  <link rel="stylesheet" href="css/style.min.css?_v=20230228121815" />
+  <link rel="stylesheet" href="css/style.min.css" />
 </head>
 
   <body>
@@ -314,7 +314,168 @@
   </div>
 </div>
 
+<div class="modal modal--film">
+  <div class="modal__inner">
+    <div class="modal__header">
+      <div class="modal__close">&#10006;</div>
+      <div class="modal__title">Рассчитать цену пленки</div>
     </div>
-    <script src="js/app.min.js?_v=20230228121815"></script>
+    <div class="modal__body">
+      <form class="form form--film-modal form--column" action="">
+        <select class="form__select form__input" name="film-type" id="film-type">
+          <option value="" selected disabled>Выберите тип пленки</option>
+          <option value="Полотно">Полотно</option>
+          <option value="Полурукав">Полурукав</option>
+        </select>
+        <select class="form__select form__input" name="film-thickness" id="film-thickness">
+          <option value="" disabled selected>Выберите толщину</option>
+          <option value="12.5">12,5</option>
+          <option value="15">15</option>
+          <option value="19">19</option>
+          <option value="23.5">23,5</option>
+          <option value="35">35</option>
+        </select>
+        <select class="form__select form__input" name="film-width" id="film-width">
+          <option value="" selected disabled>Укажите ширину</option>
+        </select>
+        <select class="form__select form__input" name="film-length" id="film-length">
+          <option value="" selected disabled>Укажите длину</option>
+          <option value="250">250</option>
+          <option value="300">300</option>
+          <option value="350">350</option>
+          <option value="400">400</option>
+          <option value="450">450</option>
+          <option value="500">500</option>
+          <option value="550">550</option>
+          <option value="600">600</option>
+          <option value="650">650</option>
+          <option value="700">700</option>
+          <option value="750">750</option>
+          <option value="800">800</option>
+          <option value="850">850</option>
+          <option value="900">900</option>
+          <option value="950">950</option>
+          <option value="1000">1000</option>
+        </select>
+        <div class="form__group">
+          <input class="form__input" id="film-modal-name" name="name" type="text" placeholder="Ваше имя" />
+          <label class="form__label" for="film-modal-name">Ваше имя</label>
+        </div>
+        <div class="form__group">
+          <input class="form__input" id="film-modal-tel" name="tel" type="tel" placeholder="Номер телефона" />
+          <label class="form__label" for="film-modal-tel">Номер телефона</label>
+        </div>
+        <div class="form__group">
+          <input class="form__input" id="film-modal-email" name="email" type="tel" placeholder="Адрес электронной почты" />
+          <label class="form__label" for="film-modal-email">Адрес электронной почты</label>
+        </div>
+        <button class="form__btn btn" type="submit">Рассчитать цену</button>
+        <div class="form__group">
+          <input type="hidden" name="checkbox" value="" />
+          <input class="form__checkbox" type="checkbox" name="checkbox" id="film-modal-license" value="1" checked required />
+          <label class="form__checkbox-label" for="film-modal-license">Я согласен на обработку персональных данных</label>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="modal modal--parts">
+  <div class="modal__inner">
+    <div class="modal__header">
+      <div class="modal__close">&#10006;</div>
+      <div class="modal__title">Узнать цену запчасти</div>
+    </div>
+    <div class="modal__body">
+      <form class="form form--parts-modal form--column" action="">
+        <div class="form__group">
+          <input class="form__input" id="parts-modal-manufacturer" name="manufacturer" type="text" placeholder="Производитель" />
+          <label class="form__label" for="parts-modal-manufacturer">Производитель</label>
+        </div>
+        <div class="form__group">
+          <input class="form__input" id="parts-modal-brand" name="brand" type="text" placeholder="Марка" />
+          <label class="form__label" for="parts-modal-brand">Марка</label>
+        </div>
+        <div class="form__group">
+          <input class="form__input form__input--file" id="parts-modal-file" name="file" type="file" placeholder="Фото шильды" />
+          <label class="form__label" for="parts-modal-file">Фото шильды</label>
+        </div>
+        <div class="form__group">
+          <input class="form__input" id="parts-modal-part" name="part" type="text" placeholder="Запчасть" />
+          <label class="form__label" for="parts-modal-part">Запчасть</label>
+        </div>
+        <div class="form__group">
+          <input class="form__input" id="parts-modal-name" name="name" type="text" placeholder="Ваше имя" />
+          <label class="form__label" for="parts-modal-name">Ваше имя</label>
+        </div>
+        <div class="form__group">
+          <input class="form__input" id="parts-modal-tel" name="tel" type="tel" placeholder="Номер телефона" />
+          <label class="form__label" for="parts-modal-tel">Номер телефона</label>
+        </div>
+        <div class="form__group">
+          <input class="form__input" id="parts-modal-email" name="email" type="tel" placeholder="Адрес электронной почты" />
+          <label class="form__label" for="parts-modal-email">Адрес электронной почты</label>
+        </div>
+        <button class="form__btn btn" type="submit">Рассчитать цену</button>
+        <div class="form__group">
+          <input type="hidden" name="checkbox" value="" />
+          <input class="form__checkbox" type="checkbox" name="checkbox" id="parts-modal-license" value="1" checked required />
+          <label class="form__checkbox-label" for="parts-modal-license">Я согласен на обработку персональных данных</label>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="modal modal--repair">
+  <div class="modal__inner">
+    <div class="modal__header">
+      <div class="modal__close">&#10006;</div>
+      <div class="modal__title">Рассчитать цену ремонта</div>
+    </div>
+    <div class="modal__body">
+      <form class="form form--repair-modal form--column" action="">
+        <div class="form__group">
+          <input class="form__input" id="repair-modal-brand" name="brand" type="text" placeholder="Марка оборудования" />
+          <label class="form__label" for="repair-modal-brand">Марка оборудования</label>
+        </div>
+        <div class="form__group">
+          <input class="form__input form__input--file" id="repair-modal-file" name="file" type="file" placeholder="Фото оборудования" />
+          <label class="form__label" for="repair-modal-file">Фото оборудования</label>
+        </div>
+        <div class="form__group">
+          <input class="form__input" id="repair-modal-quantity" name="quantity" type="text" placeholder="Количество оборудования" />
+          <label class="form__label" for="repair-modal-quantity">Количество оборудования</label>
+        </div>
+
+        <div class="form__group">
+          <input class="form__input" id="repair-modal-address" name="address" type="text" placeholder="Адрес местонахождения" />
+          <label class="form__label" for="repair-modal-address">Адрес местонахождения</label>
+        </div>
+        <div class="form__group">
+          <input class="form__input" id="repair-modal-name" name="name" type="text" placeholder="Ваше имя" />
+          <label class="form__label" for="repair-modal-name">Ваше имя</label>
+        </div>
+        <div class="form__group">
+          <input class="form__input" id="repair-modal-tel" name="tel" type="tel" placeholder="Номер телефона" />
+          <label class="form__label" for="repair-modal-tel">Номер телефона</label>
+        </div>
+        <div class="form__group">
+          <input class="form__input" id="repair-modal-email" name="email" type="tel" placeholder="Адрес электронной почты" />
+          <label class="form__label" for="repair-modal-email">Адрес электронной почты</label>
+        </div>
+        <button class="form__btn btn" type="submit">Рассчитать цену</button>
+        <div class="form__group">
+          <input type="hidden" name="checkbox" value="" />
+          <input class="form__checkbox" type="checkbox" name="checkbox" id="repair-modal-license" value="1" checked required />
+          <label class="form__checkbox-label" for="repair-modal-license">Я согласен на обработку персональных данных</label>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+    </div>
+    <script src="js/app.min.js"></script>
   </body>
 </html>

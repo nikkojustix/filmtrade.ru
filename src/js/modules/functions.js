@@ -186,14 +186,11 @@ export function bindModal(trigger, modal, close) {
   modal = document.querySelector(modal);
   close = document.querySelectorAll(close);
 
+  var openModalFunc = openModal(modal);
   const body = document.body;
   if (trigger != null) {
     trigger.forEach((trig) => {
-      trig.addEventListener('click', (e) => {
-        e.preventDefault();
-        modal.style.display = 'flex';
-        body.classList.add('locked');
-      });
+      trig.addEventListener('click', openModalFunc, false);
     });
   }
   close.forEach((closeBtn) => {
@@ -208,4 +205,24 @@ export function bindModal(trigger, modal, close) {
       body.classList.remove('locked');
     }
   });
+}
+
+const openModal = function (modal) {
+  return function () {
+    event.preventDefault();
+    modal.style.display = 'flex';
+    document.body.classList.add('locked');
+  };
+};
+
+export function unbindModal(trigger, form) {
+  trigger = document.querySelector(trigger);
+  form = document.querySelector(form);
+
+  const body = document.body;
+  if (trigger != null) {
+    const newBtn = trigger.cloneNode(true);
+    form.removeChild(trigger);
+    form.appendChild(newBtn);
+  }
 }

@@ -117,8 +117,9 @@ img {
     .form__group + .form__group {
       margin-left: 0;
     }
-    .form__group {
-      margin-bottom: 25px;
+    .form__group + .form__group,
+    .form__select + .form__select {
+      margin-top: 25px;
     }
 
     .form__input {
@@ -196,6 +197,7 @@ img {
     max-width: 240px;
     margin-right: 20px;
     padding-left: 0;
+    cursor: pointer;
   }
 
   &__category {

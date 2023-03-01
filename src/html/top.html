@@ -44,21 +44,13 @@
           <div class="top__tabs-item">
             <p class="top__text">Укажите параметры, чтобы мы могли рассчитать стоимость товара или услуги</p>
             <form class="form form--calc" action="">
-              <select class="form__select form__input" name="category" id="category">
+              <select class="form__select form__input" name="category" id="category" required>
                 <option value="" selected disabled>Выберите категорию</option>
-                <option value="Пленка">Пленка</option>
-                <option value="Запчасти">Запчасти</option>
-                <option value="Ремонт">Ремонт</option>
+                <option value="film">Пленка</option>
+                <option value="parts">Запчасти</option>
+                <option value="repair">Ремонт</option>
               </select>
-              <div class="form__category">
-                <select class="form__select form__input" name="film-type" id="film-type">
-                  <option value="" selected disabled>Выберите тип пленки</option>
-                  <option value="Полотно">Полотно</option>
-                  <option value="Полурукав">Полурукав</option>
-                </select>
-                <div class="form__film-type"></div>
-                <div class="form__film-type"></div>
-              </div>
+
               <div class="form__category">
                 <div class="form__group">
                   <input class="form__input" id="calc-manufacturer" name="manufacturer" type="text" placeholder="Производитель" />
@@ -71,7 +63,7 @@
                   <label class="form__label" for="calc-model">Модель оборудования</label>
                 </div>
               </div>
-              <button class="form__btn btn">Рассчитать</button>
+              <button class="form__btn btn open-modal-calc">Рассчитать</button>
             </form>
           </div>
           <div class="top__tabs-item">

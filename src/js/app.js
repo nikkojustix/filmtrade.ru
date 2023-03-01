@@ -58,25 +58,9 @@ const filmType = document.querySelector('#film-type');
 const calcFilmTypes = document.querySelectorAll('.form__film-type');
 
 if (category != null) {
-  category.addEventListener('change', (e) => {
-    category.classList.add('form__input--hide');
-    calcCategories.forEach((item, i) => {
-      item.classList.remove('form__category--active');
-      if (i === e.target.selectedIndex - 1) {
-        item.classList.add('form__category--active');
-      }
-    });
-  });
-}
-if (filmType != null) {
-  filmType.addEventListener('change', (e) => {
-    category.classList.add('form__input--hide');
-    calcFilmTypes.forEach((item, i) => {
-      item.classList.remove('form__category--active');
-      if (i === e.target.selectedIndex - 1) {
-        item.classList.add('form__category--active');
-      }
-    });
+  category.addEventListener('change', () => {
+    flsFunctions.unbindModal('.open-modal-calc', '.form--calc');
+    flsFunctions.bindModal('.open-modal-calc', `.modal--${category.value}`, '.modal__close');
   });
 }
 
