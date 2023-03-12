@@ -7,6 +7,17 @@ flsFunctions.isWebp();
 const burgerBtn = document.querySelector('.burger__btn');
 burgerBtn.addEventListener('click', flsFunctions.toggleMobileMenu);
 
+const dropBtn = document.querySelector('.submenu__link--btn');
+const dropdown = document.querySelector('.submenu__dropdown');
+dropBtn.addEventListener('click', () => {
+  dropdown.classList.toggle('submenu__dropdown--show');
+});
+window.addEventListener('click', (e) => {
+  if (e.target != dropBtn) {
+    dropdown.classList.remove('submenu__dropdown--show');
+  }
+});
+
 let topSliderImg, topSliderTitle;
 
 if (document.querySelector('.top__slider-img') != null && document.querySelector('.top__slider-title') != null) {
