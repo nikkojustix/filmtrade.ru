@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Страница товара</title>
-  <link rel="stylesheet" href="css/style.min.css" />
+  <link rel="stylesheet" href="css/style.min.css?_v=20230312231219" />
 </head>
 
   <body>
@@ -83,7 +83,45 @@
       <nav class="submenu">
         <ul class="submenu__list">
           <li class="submenu__item">
-            <a class="submenu__link btn btn--outline" href="#">Термоусадочная пленка</a>
+            <button class="submenu__link submenu__link--btn btn btn--outline">Термоусадочная пленка</button>
+            <ul class="submenu__dropdown">
+              <li class="submenu__dropdown-item">
+                <a class="submenu__dropdown-link" href="#">Каталог</a>
+              </li>
+              <li class="submenu__dropdown-item">
+                <a class="submenu__dropdown-link" href="#">Термоусадочная пленка Polyxfilms</a>
+              </li>
+              <li class="submenu__dropdown-item">
+                <a class="submenu__dropdown-link" href="#">Каталог</a>
+              </li>
+              <li class="submenu__dropdown-item">
+                <a class="submenu__dropdown-link" href="#">Каталог</a>
+              </li>
+              <li class="submenu__dropdown-item">
+                <a class="submenu__dropdown-link" href="#">Каталог</a>
+              </li>
+              <li class="submenu__dropdown-item">
+                <a class="submenu__dropdown-link" href="#">Каталог</a>
+              </li>
+              <li class="submenu__dropdown-item">
+                <a class="submenu__dropdown-link" href="#">Каталог</a>
+              </li>
+              <li class="submenu__dropdown-item">
+                <a class="submenu__dropdown-link" href="#">Каталог</a>
+              </li>
+              <li class="submenu__dropdown-item">
+                <a class="submenu__dropdown-link" href="#">Каталог</a>
+              </li>
+              <li class="submenu__dropdown-item">
+                <a class="submenu__dropdown-link" href="#">Каталог</a>
+              </li>
+              <li class="submenu__dropdown-item">
+                <a class="submenu__dropdown-link" href="#">Каталог</a>
+              </li>
+              <li class="submenu__dropdown-item">
+                <a class="submenu__dropdown-link" href="#">Каталог</a>
+              </li>
+            </ul>
           </li>
           <li class="submenu__item">
             <a class="submenu__link btn btn--outline" href="#">Термоусадочное оборудование</a>
@@ -146,7 +184,7 @@
     <h1 class="article__title title">Заголовок</h1>
     <time class="article__date" datetime="2023-02-13"> 13.02.2023 </time>
     <div class="article__content">
-      <img class="article__img" src="img/equip-img-3.png" alt="" />
+      <picture><source srcset="img/equip-img-3.webp" type="image/webp"><img class="article__img" src="img/equip-img-3.png" alt="" /></picture>
       <p>
         Упаковывать в термоусадочную пленку начали в 50-е годы 20 века. В то время создали пленку с «памятью» размеров, при нагреве эта
         пленка сжималась и плотно облегала продукт. Как показала практика, лучше усаживается пленка специально для этого предназначенная.
@@ -341,9 +379,7 @@
         </select>
         <select class="form__select form__input" name="film-width" id="film-width">
           <option value="" selected disabled>Укажите ширину</option>
-        </select>
-        <select class="form__select form__input" name="film-length" id="film-length">
-          <option value="" selected disabled>Укажите длину</option>
+          <option value="200">200</option>
           <option value="250">250</option>
           <option value="300">300</option>
           <option value="350">350</option>
@@ -360,6 +396,53 @@
           <option value="900">900</option>
           <option value="950">950</option>
           <option value="1000">1000</option>
+          <option value="1050">1050</option>
+          <option value="1100">1100</option>
+          <option value="1150">1150</option>
+          <option value="1200">1200</option>
+          <option value="1250">1250</option>
+          <option value="1300">1300</option>
+          <option value="1350">1350</option>
+          <option value="1400">1400</option>
+          <option value="1450">1450</option>
+          <option value="1500">1500</option>
+          <option value="1550">1550</option>
+          <option value="1600">1600</option>
+          <option value="1650">1650</option>
+          <option value="1700">1700</option>
+          <option value="1750">1750</option>
+          <option value="1800">1800</option>
+          <option value="1850">1850</option>
+          <option value="1900">1900</option>
+          <option value="1950">1950</option>
+          <option value="2000">2000</option>
+        </select>
+        <select class="form__select form__input" name="film-length" id="film-length">
+          <option value="" selected disabled>Укажите длину</option>
+          <option value="350">350</option>
+          <option value="400">400</option>
+          <option value="450">450</option>
+          <option value="500">500</option>
+          <option value="550">550</option>
+          <option value="600">600</option>
+          <option value="650">650</option>
+          <option value="700">700</option>
+          <option value="750">750</option>
+          <option value="800">800</option>
+          <option value="850">850</option>
+          <option value="900">900</option>
+          <option value="950">950</option>
+          <option value="1000">1000</option>
+          <option value="1050">1050</option>
+          <option value="1100">1100</option>
+          <option value="1150">1150</option>
+          <option value="1200">1200</option>
+          <option value="1250">1250</option>
+          <option value="1300">1300</option>
+          <option value="1350">1350</option>
+          <option value="1400">1400</option>
+          <option value="1450">1450</option>
+          <option value="1500">1500</option>
         </select>
         <div class="form__group">
           <input class="form__input" id="film-modal-name" name="name" type="text" placeholder="Ваше имя" />
@@ -420,7 +503,7 @@
           <input class="form__input" id="parts-modal-email" name="email" type="tel" placeholder="Адрес электронной почты" />
           <label class="form__label" for="parts-modal-email">Адрес электронной почты</label>
         </div>
-        <button class="form__btn btn" type="submit">Рассчитать цену</button>
+        <button class="form__btn btn" type="submit">Отправить запрос</button>
         <div class="form__group">
           <input type="hidden" name="checkbox" value="" />
           <input class="form__checkbox" type="checkbox" name="checkbox" id="parts-modal-license" value="1" checked required />
@@ -468,7 +551,7 @@
           <input class="form__input" id="repair-modal-email" name="email" type="tel" placeholder="Адрес электронной почты" />
           <label class="form__label" for="repair-modal-email">Адрес электронной почты</label>
         </div>
-        <button class="form__btn btn" type="submit">Рассчитать цену</button>
+        <button class="form__btn btn" type="submit">Отправить запрос</button>
         <div class="form__group">
           <input type="hidden" name="checkbox" value="" />
           <input class="form__checkbox" type="checkbox" name="checkbox" id="repair-modal-license" value="1" checked required />
@@ -480,6 +563,6 @@
 </div>
 
     </div>
-    <script src="js/app.min.js"></script>
+    <script src="js/app.min.js?_v=20230312231219"></script>
   </body>
 </html>

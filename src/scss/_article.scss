@@ -9,7 +9,8 @@
 
   &__img {
     float: left;
-    width: 50%;
+    max-width: 50%;
+    min-width: 200px;
     margin-bottom: 20px;
     margin-right: 20px;
   }
@@ -19,17 +20,30 @@
     * {
       margin: 0 0 20px;
     }
-    p {
-      line-height: 1.4;
-    }
-    h5 {
-      color: var(--color-primary);
-      font-weight: 500;
-      font-size: 18px;
-    }
+    h2,
+    h3,
+    h4,
+    h5,
     h6 {
       color: var(--color-primary);
       font-weight: 500;
+    }
+    p {
+      line-height: 1.4;
+    }
+    h2 {
+      font-size: 24px;
+    }
+    h3 {
+      font-size: 22px;
+    }
+    h4 {
+      font-size: 20px;
+    }
+    h5 {
+      font-size: 18px;
+    }
+    h6 {
       font-size: 16px;
     }
     ul {
@@ -39,6 +53,8 @@
     li {
       position: relative;
       padding-left: 26px;
+      display: flex;
+      margin: 0 0 10px;
       &::before {
         position: absolute;
         content: '';

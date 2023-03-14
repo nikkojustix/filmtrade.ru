@@ -90,17 +90,15 @@
   }
 
   &__content {
-    padding: 15px;
-    display: none;
-    // box-sizing: content-box;
-    // max-height: 0;
-    // opacity: 0;
-    // visibility: hidden;
-    // transition: 0.3s;
-    // overflow-x: hidden;
-    // overflow-y: hidden;
-    // display: block;
-    // will-change: max-height;
+    box-sizing: content-box;
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: block;
+    will-change: max-height;
   }
 
   &__arrow {
